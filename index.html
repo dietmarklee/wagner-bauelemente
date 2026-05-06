@@ -12,8 +12,7 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="logo">
-        <span class="logo-w">W</span>agner
-        <span class="logo-sub">Bauelemente</span>
+        <img src="images/logo_neu.png" alt="Klaus Wagner Bauelemente" class="logo-img">
       </a>
       <ul class="nav-links">
         <li><a href="#produkte">Produkte</a></li>
@@ -54,6 +53,57 @@
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
+  </section>
+
+  <!-- MARKEN -->
+  <section class="marken-section">
+    <div class="container">
+      <div class="marken-header">
+        <span class="marken-title">Unsere Marken</span>
+        <span class="marken-line"></span>
+      </div>
+      <div class="marken-track-wrap">
+        <div class="marken-track">
+          <div class="marken-logo-card">
+            <img src="images/logos/05899693.png" alt="markilux">
+          </div>
+          <div class="marken-logo-card marken-logo-dark">
+            <img src="images/logos/hewe-logo.png" alt="Hewe">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/Wortmarke-4c.jpg" alt="Hörmann">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/akotherm-logo_2020-1.png" alt="Akotherm">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/logo.png" alt="Selve">
+          </div>
+          <div class="marken-logo-card marken-logo-wide">
+            <img src="images/logos/westaggetalit_dreve.jpg" alt="Westag & Getalit / Dreve">
+          </div>
+          <!-- Duplikate für nahtlosen Loop -->
+          <div class="marken-logo-card">
+            <img src="images/logos/05899693.png" alt="markilux">
+          </div>
+          <div class="marken-logo-card marken-logo-dark">
+            <img src="images/logos/hewe-logo.png" alt="Hewe">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/Wortmarke-4c.jpg" alt="Hörmann">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/akotherm-logo_2020-1.png" alt="Akotherm">
+          </div>
+          <div class="marken-logo-card">
+            <img src="images/logos/logo.png" alt="Selve">
+          </div>
+          <div class="marken-logo-card marken-logo-wide">
+            <img src="images/logos/westaggetalit_dreve.jpg" alt="Westag & Getalit / Dreve">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- PRODUKTE -->
@@ -341,7 +391,9 @@
             <div><strong>Öffnungszeiten</strong><span>Mo–Fr: 8:00 – 17:00 Uhr</span></div>
           </div>
         </div>
-        <form class="kontakt-form" onsubmit="handleSubmit(event)">
+        <form class="kontakt-form" name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="kontakt">
+          <p class="bot-field" hidden><input name="bot-field"></p>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -384,7 +436,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <span class="logo-w">W</span>agner <span class="logo-sub">Bauelemente</span>
+        <img src="images/logo_neu.png" alt="Klaus Wagner Bauelemente" class="logo-img logo-img-footer">
       </div>
       <p class="footer-copy">© 2024 Wagner Bauelemente · Leopoldshöhe</p>
       <div class="footer-links">

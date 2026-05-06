@@ -54,23 +54,20 @@ body {
   height: 70px;
 }
 .logo {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--primary);
   text-decoration: none;
   display: flex;
-  align-items: baseline;
-  gap: 2px;
-  letter-spacing: -0.5px;
+  align-items: center;
 }
-.logo-w { color: var(--accent); font-size: 1.6rem; }
-.logo-sub {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-light);
-  margin-left: 6px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+.logo-img {
+  height: 58px;
+  width: auto;
+}
+.logo-img-footer {
+  height: 48px;
+  width: auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
 }
 .nav-links {
   display: flex;
@@ -258,6 +255,87 @@ body {
   0% { opacity: 1; top: 6px; }
   100% { opacity: 0; top: 22px; }
 }
+
+/* MARKEN */
+.marken-section {
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.marken-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.marken-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+.marken-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.marken-track-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.marken-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+.marken-track:hover { animation-play-state: paused; }
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marken-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 28px;
+  height: 80px;
+  min-width: 160px;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+.marken-logo-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.marken-logo-card img {
+  max-height: 44px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter var(--transition), opacity var(--transition);
+}
+.marken-logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.marken-logo-dark {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+}
+.marken-logo-dark:hover { border-color: var(--accent); }
+.marken-logo-dark img { opacity: 0.9; filter: grayscale(0%); }
+.marken-logo-wide { min-width: 220px; }
+.marken-logo-wide img { max-width: 190px; }
 
 /* SECTIONS */
 .section { padding: 96px 0; }
