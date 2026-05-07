@@ -562,13 +562,14 @@ body {
 }
 .value span { font-weight: 500; color: var(--text); }
 .ueber-visual {
-  position: relative;
-  height: 340px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 16px;
 }
 .ueber-card-big {
-  position: absolute;
-  top: 0; left: 0;
-  width: 240px; height: 240px;
+  width: 200px;
+  min-height: 200px;
   background: var(--primary);
   border-radius: var(--radius-lg);
   display: flex;
@@ -576,19 +577,24 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
 }
 .ueber-number {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #fff;
   line-height: 1;
 }
 .ueber-number span { color: var(--accent); }
 .ueber-label { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 8px; }
+.ueber-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
 .ueber-card-small {
-  position: absolute;
-  bottom: 20px; left: 180px;
-  width: 140px; height: 140px;
+  flex: 1;
   background: var(--accent);
   border-radius: var(--radius-lg);
   display: flex;
@@ -598,18 +604,14 @@ body {
   box-shadow: var(--shadow);
 }
 .ueber-card-small-2 {
-  bottom: auto;
-  top: 180px;
-  left: 240px;
+  flex: 1;
   background: #fff;
   border: 1px solid var(--border);
-  width: 160px;
-  height: 120px;
 }
 .ueber-card-small-2 .ueber-number-sm { color: var(--primary); }
 .ueber-card-small-2 .ueber-label-sm { color: var(--text-light); }
 .ueber-number-sm {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #fff;
   line-height: 1;
@@ -717,7 +719,7 @@ body {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .ueber-grid { grid-template-columns: 1fr; gap: 48px; }
-  .ueber-visual { height: 260px; }
+  .ueber-visual { flex-direction: column; }
   .kontakt-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
