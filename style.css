@@ -33,34 +33,30 @@ body {
   padding: 0 24px;
 }
 
-/* TOPBAR */
-.topbar {
-  background: var(--primary);
-  color: rgba(255,255,255,0.8);
-  font-size: 0.82rem;
-  padding: 7px 0;
-  position: relative;
-  z-index: 101;
+/* NAV TEL */
+.nav-tel-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 8px;
+  border-left: 1px solid var(--border);
+  margin-left: 4px;
 }
-.topbar-inner {
+.nav-tel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.topbar-tel { display: flex; align-items: center; gap: 12px; }
-.topbar-tel a {
-  color: rgba(255,255,255,0.9);
+  gap: 5px;
+  color: var(--primary) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
   text-decoration: none;
-  font-weight: 600;
+  padding: 0 !important;
+  background: none !important;
   transition: color var(--transition);
+  white-space: nowrap;
 }
-.topbar-tel a:hover { color: var(--accent); }
-.topbar-sep { color: rgba(255,255,255,0.3); }
-@media (max-width: 600px) {
-  .topbar span:first-child { display: none; }
-}
+.nav-tel:hover { color: var(--accent) !important; background: none !important; }
+.nav-tel svg { flex-shrink: 0; stroke: var(--accent); }
 
 /* KONTAKT TEL */
 .kontakt-tel {
